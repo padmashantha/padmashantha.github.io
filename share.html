@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+.o-subhead1{
+font-family: 'NeueHaasGroteskDisplayBold', 'Arial';
+font-size: 24px;
+line-height: 26px;
+color: #000000;
+display: inline-block;
+}
+
+span.share_icon {
+background: url("share_icons_sprite_2016_10.png") no-repeat;
+height: 50px;
+width: 50px;
+margin-right: 10px;
+display: inline-block;
+vertical-align: middle;
+}
+</style>
+
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1437752512909222',
+    xfbml      : true,
+    version    : 'v2.8'
+  });
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "http://connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</head>
+<body>
+
+<div class="o-subhead1">Refer your friends on Facebook, Twitter, or Email then rake in the rewards.</div>
+<div>
+<a id="shareBtn" href="#" title="Share on Facebook" class="secondaryCTA" onclick="sh.shareOnSn({
+	sn: 'facebook',
+	offer_id: '122',
+	rId: '',
+	url: 'https://kvtest.sohalo.com/go/ml.php?sid=_122&amp;p=1',
+	customPost: {name:'Sign up w/ Verizon &amp; get $50 in Visa Rewards Cards.', 
+	description:'The grass isn\'t always greener... but this time it is! Join me on Verizon &amp; we both get paid.', 
+	display:'popup', 
+	offer_id: '122', 
+	picture:'https://sohalo-test-kobie-img.s3.amazonaws.com/kvtest_offer_new_122.png'}})" 
+	aria-label="To make this website accessible to screen reader, Press combination of alt and 1 keys. To stop getting this message, press the combination of alt and 2 keys">
+	<span class="share_icon Facebook"></span> Share on Facebook
+</a>
+</div>
+
+<h3>Sharing Links</h3>
+
+<a id="shareBtn" href="#">Share Me</a>
+
+<p>The Share Dialog enables you to share links to a person's profile without them having to use Facebook Login. 
+<a href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Read our Share Dialog guide</a> to learn more about how it works.</p>
+
+<script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    display: 'popup',
+    method: 'share',
+    href: 'http://localhost:8080/fb/share_icons_sprite_2016_10.png',
+    redirect_uri: 'http://localhost:8080/fb/share.html'
+  }, function(response){});
+}
+</script>
+
+<h3>Publishing Open Graph Stories</h3>
+
+<p>The Share Dialog can also be used to publish Open Graph stories without using Facebook Login or the Graph API. <a href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Read our Share Dialog guide</a> to learn more about how it works.</p>
+
+<a id="ogBtn" href="#">Share Me</a>
+
+<script>
+document.getElementById('ogBtn').onclick = function() {
+	alert('test alert');
+  FB.ui({
+    display: 'popup',
+    method: 'share_open_graph',
+    action_type: 'og.likes',
+    action_properties: JSON.stringify({
+        object:'https://developers.facebook.com/docs/',
+    })
+  }, function(response){});
+}
+</script>
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<h1>Testing Share Link</h1>
+<a href="https://www.facebook.com/dialog/share?app_id=1437752512909222&display=popup&href=http://sohalo-test-kobie-img.s3.amazonaws.com/kvtest_offer_new_122.png&redirect_uri=http://localhost:8080/fb/share.html">
+Click Here</a>
+
+</body>
+</html>
