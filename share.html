@@ -34,7 +34,7 @@ window.fbAsyncInit = function() {
    var js, fjs = d.getElementsByTagName(s)[0];
    if (d.getElementById(id)) {return;}
    js = d.createElement(s); js.id = id;
-   js.src = "http://connect.facebook.net/en_US/sdk.js";
+   js.src = "//connect.facebook.net/en_US/sdk.js";
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
 </script>
@@ -60,16 +60,7 @@ window.fbAsyncInit = function() {
 </div-->
 
 <div>
-<a id="shareBtn" href="#" title="Share on Facebook" class="secondaryCTA" onclick="sh.shareOnSn({
-  sn: 'facebook',
-  offer_id: '122',
-  rId: '',
-  url: 'https://kvtest.sohalo.com/go/ml.php?sid=_122&amp;p=1',
-  customPost: {name:'Sign up w/ Verizon &amp; get $50 in Visa Rewards Cards.', 
-  description:'The grass isn\'t always greener... but this time it is! Join me on Verizon &amp; we both get paid.', 
-  display:'popup', 
-  offer_id: '122', 
-  picture:'https://sohalo-test-kobie-img.s3.amazonaws.com/kvtest_offer_new_122.png'}})" 
+<a id="shareBtn" href="#" title="Share on Facebook" class="secondaryCTA"  
   aria-label="To make this website accessible to screen reader, Press combination of alt and 1 keys. To stop getting this message, press the combination of alt and 2 keys">
   <span class="share_icon Facebook"></span> Share on Facebook
 </a>
