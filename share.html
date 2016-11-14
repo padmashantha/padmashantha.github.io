@@ -66,12 +66,14 @@ window.fbAsyncInit = function() {
 </a>
 </div>
 
-<h3>Sharing Links</h3>
+<div>
+<a id="shareBtn1" href="#" title="Share on Facebook" class="secondaryCTA"  
+  aria-label="To make this website accessible to screen reader, Press combination of alt and 1 keys. To stop getting this message, press the combination of alt and 2 keys">
+  <span class="share_icon Facebook"></span> Share on Facebook1
+</a>
+</div>
 
-<a id="shareBtn" href="#">Share Me</a>
 
-<p>The Share Dialog enables you to share links to a person's profile without them having to use Facebook Login. 
-<a href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Read our Share Dialog guide</a> to learn more about how it works.</p>
 
 <script>
 document.getElementById('shareBtn').onclick = function() {
@@ -81,6 +83,19 @@ document.getElementById('shareBtn').onclick = function() {
     href: 'https://padmashantha.github.io/vzw_promo.png',
     redirect_uri: 'https://padmashantha.github.io/share.html'
   }, function(response){});
+}
+
+document.getElementById('shareBtn1').onclick = function() {
+  FB.ui({
+    method: 'share_open_graph',
+    action_type: 'og.likes',
+    action_properties: JSON.stringify({
+      object:'https://developers.facebook.com/docs/',
+    })
+  }, function(response){
+    // Debug response (optional)
+    console.log(response);
+  });
 }
 </script>
 
