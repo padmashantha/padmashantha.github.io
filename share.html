@@ -42,22 +42,10 @@ window.fbAsyncInit = function() {
 </head>
 <body>
 
+
+
 <div class="o-subhead1">Refer your friends on Facebook, Twitter, or Email then rake in the rewards.</div>
-<!--div>
-<a id="shareBtn" href="#" title="Share on Facebook" class="secondaryCTA" onclick="sh.shareOnSn({
-	sn: 'facebook',
-	offer_id: '122',
-	rId: '',
-	url: 'https://kvtest.sohalo.com/go/ml.php?sid=_122&amp;p=1',
-	customPost: {name:'Sign up w/ Verizon &amp; get $50 in Visa Rewards Cards.', 
-	description:'The grass isn\'t always greener... but this time it is! Join me on Verizon &amp; we both get paid.', 
-	display:'popup', 
-	offer_id: '122', 
-	picture:'https://sohalo-test-kobie-img.s3.amazonaws.com/kvtest_offer_new_122.png'}})" 
-	aria-label="To make this website accessible to screen reader, Press combination of alt and 1 keys. To stop getting this message, press the combination of alt and 2 keys">
-	<span class="share_icon Facebook"></span> Share on Facebook
-</a>
-</div-->
+
 
 <div>
 <a id="shareBtn" href="#" title="Share on Facebook" class="secondaryCTA"  
@@ -66,12 +54,6 @@ window.fbAsyncInit = function() {
 </a>
 </div>
 
-<div>
-<a id="shareBtn1" href="#" title="Share on Facebook" class="secondaryCTA"  
-  aria-label="To make this website accessible to screen reader, Press combination of alt and 1 keys. To stop getting this message, press the combination of alt and 2 keys">
-  <span class="share_icon Facebook"></span> Share on Facebook1
-</a>
-</div>
 
 
 
@@ -83,21 +65,12 @@ document.getElementById('shareBtn').onclick = function() {
     quote: 'test',
     href: 'https://padmashantha.github.io/vzw_promo.png',
     redirect_uri: 'https://padmashantha.github.io/share.html'
-  }, function(response){});
-}
-
-document.getElementById('shareBtn1').onclick = function() {
-  FB.ui({
-    method: 'share_open_graph',
-    action_type: 'og.likes',
-    action_properties: JSON.stringify({
-      object:'https://padmashantha.github.io/vzw_promo.png',
-    })
   }, function(response){
-    // Debug response (optional)
-    console.log(response);
+    // call back functio
   });
 }
+
+
 </script>
 
 
